@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add New Train</title>
+</head>
+<body>
+    <form action="admin_login.php" method="post">
+        <div align="center">
+            Train number: <input type="text" name="tno" required><br>
+            Train name: <input type="text" name="tname" required><br>
+            <label>Source Id: </label>
+                <select name="source_id" id="sid">
+                    <option value="BNR">BNR</option>
+                    <option value="VKP">VKP</option>
+                    <option value="XYZ">XYZ</option>
+                    <option value="ABC">ABC</option>
+                </select><br> <br>
+            <label>Destination Id: </label>
+                <select name="destn_id" id="did">
+                    <option value="BNR">BNR</option>
+                    <option value="VKP">VKP</option>
+                    <option value="XYZ">XYZ</option>
+                    <option value="ABC">ABC</option>
+                </select><br> <br>
+            Departure Time: <input type="time" name="dtime" required><br>
+            Arrival Time: <input type="time" name="atime" required><br>
+            <input type="submit">
+        
+            <!-- <br><br><a href="index.html">Home Page</a> -->
+        </div>
+    </form>
+</body>
+</html>
