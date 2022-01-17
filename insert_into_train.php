@@ -29,6 +29,27 @@ else
 {
  echo "Error: Data is wrong ";
 }
+
+$query1 = "INSERT INTO schedule(train_number, station_id, arrival_time, departure_time) VALUES('".$train_number."','".$source_id."',NULL,'".$depature_time."')";
+if ($conn->query($query1) === TRUE) 
+{
+ echo "" ;
+ 
+} 
+else 
+{
+ echo "";
+}
+$query2 = "INSERT INTO schedule(train_number, station_id, arrival_time, departure_time) VALUES('".$train_number."','".$destination_id."','".$arrival_time."',NULL)";
+if ($conn->query($query2) === TRUE) 
+{
+ echo "" ;
+ 
+} 
+else 
+{
+ echo "";
+}
 echo "<a href=\"http://localhost/railway/admin_page.php\">Go Back to Admin Menu!!!</a>";
 $conn->close(); 
 ?>
