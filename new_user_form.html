@@ -1,5 +1,39 @@
 <html>
-    <!-- background-image: url(userlogin.png); -->
+    <style>
+        body{
+            background-image: url('https://thumbs.dreamstime.com/z/social-media-background-man-icon-notification-vector-marketing-blog-new-user-bubble-online-business-team-backdrop-men-111500013.jpg');
+        }
+        h1{
+            color: rgb(9, 133, 250);
+        }
+        label{
+            color: purple;
+            font-size: larger;
+            font-weight: 600;
+        }
+        .submit,a{
+            background-color: gray; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        a{
+            background-color: rgb(99, 99, 245);
+        }
+        a:hover{
+            background-color: blue;
+        }
+        .submit:hover{
+            background-color: green;
+        }
+        .inputs{
+            padding: 10px 15px;
+        }
+    </style>
 <body style=" 
     height: 100%; 
     background-position: center;
@@ -8,15 +42,22 @@
 
 <form action="new_user_form.php" method="post">
 <div align="center">
-    Kindly enter your credentials!!!<br><br>
-    User name: <input type="text" name="uname" required><br><br>
-    Enter your age: <input type="number" name="num" min="18" required><br><br>
-    Gender: <input type="text" name="gender" required><br><br>
-    Password: <input type="password" name="password" required><br><br>
-    E-mail ID: <input type="email" name="emailid" required><br><br>
-    Mobile No.: <input type="tel" name="mobileno" required><br><br>
+    <br>
+    <h1>Kindly enter your credentials!!!</h1><br><br>
+    <label >User name: </label>
+    <input type="text" name="uname" class="inputs" required><br><br>
+    <label >Enter your age: </label>
+    <input type="number" name="num" class="inputs" min="18" required><br><br>
+    <label >Gender: </label>
+    <input type="text" name="gender" class="inputs" required><br><br>
+    <label >Password: </label>
+    <input type="password" name="password" class="inputs" required><br><br>
+    <label >E-mail ID: </label>
+    <input type="email" name="emailid" class="inputs" required><br><br>
+    <label >Mobile No.: </label>
+    <input type="tel" name="mobileno" class="inputs" required><br><br>
 
-    <input type="submit" value="Save"><br><br>
+    <input type="submit" value="Submit" class="submit"><br><br>
 
     <a href="index.html">Home Page</a>
 </div>

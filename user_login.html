@@ -1,5 +1,42 @@
 <html>
-    <!-- background-image: url(userlogin.png) -->
+    <style>
+        body{
+            background-image: url('https://thumbs.dreamstime.com/z/social-media-background-man-icon-notification-vector-marketing-blog-new-user-bubble-online-business-team-backdrop-men-111500013.jpg');
+        }
+        h1{
+            color: rgb(9, 133, 250);
+            padding-top: 100px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        label{
+            color: purple;
+            font-size: larger;
+            font-weight: 600;
+        }
+        .submit,a{
+            background-color: gray; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        a{
+            background-color: rgb(99, 99, 245);
+        }
+        a:hover{
+            background-color: blue;
+        }
+        .submit:hover{
+            background-color: green;
+        }
+        .inputs{
+            padding: 10px 15px;
+        }
+    </style>
 <body style=" 
     height: 100%; 
     background-position: center;
@@ -8,15 +45,17 @@
 
 <form action="user_login.php" method="post">
 <div align="center">
-Enter the details:<br><br>
-Registered email: <input type="email" name="emailid" required><br><br>
-Password: <input type="password" name="password" required><br><br>
+    <h1>Enter the details:</h1><br><br>
+    <label >Registered email: </label>
+    <input type="email" name="emailid" class="inputs" required><br><br>
+    <label>Password: </label>
+    <input type="password" name="password" class="inputs" required><br><br>
 
-<input type="submit" value="Login">
+    <input type="submit" value="Login"  class="submit">
 
 
 
-<br><br><a href="index.html">Home Page</a>
+    <br><br><a href="index.html">Home Page</a>
 
 
 </div>
