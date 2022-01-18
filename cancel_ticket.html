@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        body{
+            background-image: url('https://thumbs.dreamstime.com/z/social-media-background-man-icon-notification-vector-marketing-blog-new-user-bubble-online-business-team-backdrop-men-111500013.jpg');
+            padding-top: 300px;
+        }
+        label{
+            color: purple;
+            font-size: larger;
+            font-weight: 900;
+        }
+        .submit,a{
+            background-color: gray; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .submit{
+            margin-top: 20px;
+        }
+        a{
+            background-color: rgb(99, 99, 245);
+        }
+        a:hover{
+            background-color: blue;
+        }
+        .submit:hover{
+            background-color: green;
+        }
+        .inputs{
+            padding: 10px 15px;
+        }
+    </style>
 <head>
+
+</head>
+<body style=" 
+height: 100%; 
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;" >
     <form action="cancel_ticket.php" method="post">
         <div align="center">
-            Cancel Pnr: <input type="text" name="cpnr" required><br>
-            <input type="submit">
+            <div>
+                <label >Cancel Pnr:</label>
+                <input type="text" name="cpnr" class="inputs"  required><br>
+            </div>
+            
+            <input type="submit" class="submit" >
         
             <!-- <br><br><a href="index.html">Home Page</a> -->
         </div>
-        </form>
-</head>
-<body>
-    
+    </form>
 </body>
+</html>

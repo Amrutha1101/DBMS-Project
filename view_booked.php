@@ -1,5 +1,40 @@
 <html>
-<body>
+<body style=" 
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;"
+    >
+    <style>
+        body{
+            background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
+            text-align:center;
+        }
+        table{
+            text-align:center;
+            padding-top:100px;
+            margin:auto;
+        }
+        td{
+            color:red;
+            font-size: x-large;
+            font-weight: 900;
+        }
+        a{
+            background-color: rgb(99, 99, 245);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        } 
+        
+        a:hover{
+            background-color: blue;
+        }
+    </style>
 
 <?php
 
@@ -12,7 +47,7 @@ $email = $_SESSION["uemail"];
 $query="SELECT * FROM ticket where user_email = '".$_SESSION["uemail"]."' ";
 $result=mysqli_query($conn,$query);
 
-echo "<table><thead><td>PNR</td><td>Train_no</td><td>Date_Of_Journey</td><td>Train_Class</td><td>Seats</td><td>From Station</td><td>To Station</td><td>Fare</td><td>Status</td></thead>";
+echo " <table><thead><td>PNR</td><td>Train_no</td><td>Date_Of_Journey</td><td>Train_Class</td><td>Seats</td><td>From Station</td><td>To Station</td><td>Fare</td><td>Status</td></thead>";
 
 while ($row=mysqli_fetch_array($result))
 {
