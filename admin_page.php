@@ -1,3 +1,35 @@
+<html>
+    <body>
+        <style>
+            body{
+                background-image:url('https://thumbs.dreamstime.com/z/social-media-background-man-icon-notification-vector-marketing-blog-new-user-bubble-online-business-team-backdrop-men-111500013.jpg');
+                height: 100%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align:center;
+                margin-top:200px;
+            }
+            .name{
+                color:blue;
+                list-style-type: none;
+                padding: 200px;
+            }
+            a{
+                background-color: green;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size:larger;
+                font-weight:400;
+            }
+            a:hover{
+                background-color: blue;
+            }
+        </style>
+    
 <?php
 
 session_start();
@@ -13,3 +45,5 @@ echo " <br><a href=\"http://localhost/railway/cancelled.php\"> View all cancelle
 echo " <br><a href=\"http://localhost/railway/logout.php\"> Logout </a><br> "; //done
 
 ?>
+</body>
+</html>

@@ -1,10 +1,50 @@
 <html>
-<body><!-- style=" background-image: url(adminlogin.jpeg);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;"-->
-
+<body>
+    <style>
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align:center;
+        }
+        table{
+            text-align:center;
+            padding-top:100px;
+            margin:auto;
+        }
+        td{
+            color:purple;
+            font-size: x-large;
+            font-weight: 900;
+            text-transform:uppercase;
+        }
+        label{
+            color: red;
+            font-size: larger;
+            font-weight: 600;
+        }
+        .submit,a{
+            background-color: gray; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        a{
+            background-color: rgb(99, 99, 245);
+        }
+        a:hover{
+            background-color: blue;
+        }
+        .inputs{
+            padding: 10px 15px;
+        }
+    </style>
 
 <?php
 
@@ -29,8 +69,10 @@ echo "</table>";
 ?>
 <br>
 <span><form action="insert_into_station.php" method="post">
-Add Station :<input type="text" name="station_id" placeholder="Station Id"/> <input type="text" name="station_name" placeholder=" New Station" required>
-<input type="submit" value="Add"></span>
+    <label>Add Station :</label>
+    <input type="text" name="station_id" placeholder="Station Id"  class="inputs" /> 
+    <input type="text" name="station_name" placeholder=" New Station" class="inputs" required>
+    <input type="submit" value="Add" class="submit"></span>
 <?php
 echo "<br><br> <a href=\"http://localhost/railway/admin_page.php\">Go Back to Admin Menu!!!</a> ";
 ?>

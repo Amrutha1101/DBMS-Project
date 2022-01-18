@@ -2,20 +2,71 @@
 <html lang="en">
 <head>
     <title>Add New Train</title>
+    <style>
+        body{
+            background-image: url('https://thumbs.dreamstime.com/z/social-media-background-man-icon-notification-vector-marketing-blog-new-user-bubble-online-business-team-backdrop-men-111500013.jpg');
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:200px;
+        }
+        h1{
+            color: rgb(9, 133, 250);
+        }
+        label{
+            color: purple;
+            font-size: x-large;
+            font-weight: 600;
+            padding-bottom: 3px;
+        }
+        .submit,a{
+            background-color: gray; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        a{
+            background-color: rgb(99, 99, 245);
+        }
+        a:hover{
+            background-color: blue;
+        }
+        .submit:hover{
+            background-color: green;
+        }
+        .inputs{
+            padding: 10px 15px;
+            margin-bottom: 6px;
+        }
+    </style>
 </head>
 <body>
+    
     <form action="insert_into_train.php" method="post">
         <div align="center">
-            Train number: <input type="text" name="tno" required><br>
-            Train name: <input type="text" name="tname" required><br>
-            Source Id: <input type="text" name="sid" required><br>
-            Departure Time: <input type="time" name="dtime" required><br>
-            Destination Id: <input type="text" name="did" reuired><br>
-            Arrival Time: <input type="time" name="atime" required><br>
-            Day of Arrival: <input type="text" name="doa" required><br>
-            <input type="submit" value="Save"><br><br>
+            <label >Train number: </label>
+            <input type="text" name="tno" class="inputs" required><br>
+            <label >Train name:</label>
+            <input type="text" name="tname" class="inputs" required><br>
+            <label >Source Id: </label>
+            <input type="text" name="sid" class="inputs" required><br>
+            <label > Departure Time: </label>
+            <input type="time" name="dtime" class="inputs" required><br>
+            <label >Destination Id:</label>
+            <input type="text" name="did" class="inputs" required><br>
+            <label >Arrival Time:</label>
+            <input type="time" name="atime" class="inputs" required><br>
+            <label >Day of Arrival:</label>
+            <input type="text" name="doa" class="inputs" required><br>
+
+            <input type="submit" value="Save" class="submit"><br><br>
         
-            <a href="http://localhost/railway/admin_page.php">Go Back to Admin Menu!!!</a>>
+            <a href="http://localhost/railway/admin_page.php">Go Back to Admin Menu!!!</a>
         </div>
     </form>
 </body>
