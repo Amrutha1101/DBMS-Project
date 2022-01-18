@@ -55,7 +55,7 @@ $sql = "INSERT INTO user VALUES ('".$name."','".$age."','".$gender."','".$phone_
 
 if ($conn->query($sql) === TRUE) 
 {
- echo "<h1> Hi $email, <a href=\"user_page.php\"> Click here </a> to browse through our website!!! </h1>" ;
+ echo "<h1> Hi $email, <a href=\"indez.html\"> Click here </a> to browse through our website!!! </h1>" ;
 } 
 else 
 {
