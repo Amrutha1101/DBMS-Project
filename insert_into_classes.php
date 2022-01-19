@@ -18,7 +18,7 @@
             font-weight: 900;
             text-transform:uppercase;
         }
-        a{
+        .submit,a{
             background-color: rgb(99, 99, 245); /* Green */
             border: none;
             color: white;
@@ -85,18 +85,18 @@ $temp+=1;
 $temp=0;
 
 echo " 
-<td><input type=\"text\" name=\"s1".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"f1".$temp."\" value=\"0\" required></td>	
-<td><input type=\"text\" name=\"s2".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"f2".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"s3".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"f3".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"s4".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"f4".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"s5".$temp."\" value=\"0\" required></td>
-<td><input type=\"text\" name=\"f5".$temp."\" value=\"0\" required></td>
+<td><input type=\"text\" name=\"s1".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"f1".$temp."\" value=\"0\" class=\"inputs\"required></td>	
+<td><input type=\"text\" name=\"s2".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"f2".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"s3".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"f3".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"s4".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"f4".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"s5".$temp."\" value=\"0\" class=\"inputs\"required></td>
+<td><input type=\"text\" name=\"f5".$temp."\" value=\"0\" class=\"inputs\"required></td>
 </tr>";
-echo "</table><input type=\"submit\"></form>";
+echo "</table><input type=\"submit\" class=\"submit\"></form>";
 
 
 }else
@@ -118,9 +118,9 @@ while ($row=mysqli_fetch_array($result))
 }
 
 echo "</select></td>
-<td><input type=\"date\" name=\"doj\" required></td></tr>
+<td><input type=\"date\" name=\"doj\" class=\"inputs\"required></td></tr>
 </table>
-<input class=\"inputs\" type=\"submit\" value=\"Enter Train Details\">
+<input class=\"inputs\" type=\"submit\" class=\"submit\"value=\"Enter Train Details\">
 ";
 }
 

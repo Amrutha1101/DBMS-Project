@@ -33,7 +33,7 @@ $sql = "DELETE from user where email= ('".$_GET["id"]."')";
 echo $_GET["id"];
 
 if ($conn->query($sql) === TRUE) {
-    echo " Record deleted successfully";
+    echo "<h2>Record deleted successfully</h2>";
 } else {
     echo "Error:" . $conn->error;
 }

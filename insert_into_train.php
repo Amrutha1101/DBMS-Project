@@ -1,10 +1,28 @@
 <html>
-<body> <!--style=" background-image: url(userlogin.png);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;" -->
-
+<body > 
+    <style>
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;text-align:center;
+			margin-top:200px;
+        }
+        a{
+            background-color: rgb(99, 99, 245); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin:auto;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        a:hover{
+            background-color: blue;
+        }
+    </style>
 <?php 
 
 require "db.php";
@@ -22,12 +40,12 @@ $sql = "INSERT INTO train VALUES ('".$train_number."','".$train_name."','".$sour
 
 if ($conn->query($sql) === TRUE) 
 {
- echo "Data recorded successfully" ;
+ echo "<h2>Data recorded successfully</h2>" ;
  
 } 
 else 
 {
- echo "Error: Data is wrong ";
+ echo "<h2>Error: Data is wrong</h2>";
 }
 
 $query1 = "INSERT INTO schedule(train_number, station_id, arrival_time, departure_time) VALUES('".$train_number."','".$source_id."',NULL,'".$depature_time."')";

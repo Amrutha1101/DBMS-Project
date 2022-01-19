@@ -1,5 +1,52 @@
 <html>
    <body>
+    <style>
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align:center;
+        }
+        
+        label{
+            color: purple;
+            font-size: larger;
+            font-weight: 600;
+        }
+        table{
+            padding-top:100px;
+            margin:auto;
+        }
+        td{
+            color:green;
+            font-size: x-large;
+            font-weight: 900;
+            text-transform:uppercase;
+        }
+        .submit,a{
+            background-color: rgb(99, 99, 245); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin:auto;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .submit{
+            background-color:green;
+        }
+        a:hover{
+            background-color: blue;
+        }
+        
+        .inputs{
+            padding: 10px 15px;
+        }
+    </style>
+
 
 <?php
 
@@ -33,8 +80,8 @@ if(isset($_POST["did"])) {
     $result=mysqli_query($conn,$query);
 
     echo "
-    <br>Add Train :
-    <br>
+    <br><label>Add Train :</label>
+    
     <form action=\"reserve.php\" method=\"post\">
     <table>
     <thead><td>From Station</td><td>To Station</td><td>Number of Passengers</td><td>Date of Journey</td></thead>
@@ -64,7 +111,7 @@ if(isset($_POST["did"])) {
 
     echo "</select></td><td><input type=\"text\" name=\"num\" required></td><td><input type=\"date\" name=\"doj\" required></td></tr>
     </table>
-    <input type=\"submit\" value=\"Search\">";
+    <input type=\"submit\" value=\"Search\" class=\"submit\">";
 }
 echo " <br><br><a href=\"http://localhost/railway/user_page.php\">Go Back</a><br>";
 

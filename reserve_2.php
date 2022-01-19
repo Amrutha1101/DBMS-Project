@@ -1,5 +1,40 @@
 <html>
 <body>
+    <style>
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align:center;
+            margin-top:100px;
+        }
+        table{
+            padding-top:100px;
+            margin:auto;
+        }
+        td{
+            color:green;
+            font-size: x-large;
+            font-weight: 900;
+            text-transform:uppercase;
+        }
+        .submit,a{
+            background-color: rgb(99, 99, 245); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin:auto;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        a:hover{
+            background-color: blue;
+        }
+    </style>
+
 
 <?php
 
@@ -57,7 +92,7 @@ if(isset($_POST["cname"])){
         echo " <option value = \"$cname\" > $tn </option> ";
     }
 
-    echo "</select></td><td><input type=\"submit\" value=\"Book\"></table>";
+    echo "</select></td><td><input type=\"submit\" value=\"Book\" class=\"submit\"></table>";
 }
 
 echo " <br><br><a href=\"http://localhost/railway/user_page.php\">Go Back</a><br>";

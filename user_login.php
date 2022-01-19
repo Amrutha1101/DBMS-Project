@@ -1,9 +1,32 @@
 <html>
-<body><!-- style=" background-image: url(userlogin.png);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;" -->
+<body>
+    <style>
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align:center;
+        }
+        
+        .submit,a{
+            background-color: rgb(99, 99, 245); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin:auto;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .submit{
+            background-color:green;
+        }
+        a:hover{
+            background-color: blue;
+        }
+    </style>
 
 <?php 
 
@@ -29,7 +52,7 @@ if($row = mysqli_fetch_array($query))
 {
     header('location:user_page.php');
 } else {
-    echo "Wrong Email id or Password";
+    echo "<h2>Wrong Email id or Password</h2>";
 }
 
 $conn->close(); 

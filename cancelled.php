@@ -53,7 +53,7 @@ echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[4]."</td><td>".$row
 }
 
 echo "</table>";
-echo "<br><a href=\"http://localhost/railway/admin_page.php\"><input type=\"submit\"  value=\"Go Back\"/></a> ";
+echo "<br><a href=\"http://localhost/railway/admin_page.php\">Go Back</a> ";
 
 $conn->close();
 ?>
