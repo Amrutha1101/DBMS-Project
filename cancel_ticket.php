@@ -13,10 +13,10 @@ session_start();
 require "db.php";
 
 $pnr=$_POST["cpnr"];
-$uid=$_SESSION["uemail"];
+
 //echo "$uid";
 
-$sql=" UPDATE ticket SET status ='CANCELLED' WHERE ticket.pnr='".$pnr."' AND ticket.user_email='".$_SESSION["uemail"]."' ";
+$sql=" UPDATE ticket SET status ='CANCELLED' WHERE ticket.pnr='".$pnr."' AND ticket.user_email='".$_SESSION["uemailid"]."' ";
 
 if ($conn->query($sql) === TRUE) 
 {
