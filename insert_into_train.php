@@ -48,7 +48,7 @@ else
  echo "<h2>Error: Data is wrong</h2>";
 }
 
-$query1 = "INSERT INTO schedule(train_number, station_id, arrival_time, departure_time) VALUES('".$train_number."','".$source_id."',NULL,'".$depature_time."')";
+$query1 = "INSERT INTO schedule(train_number, station_id, arrival_time, departure_time,day_of_arrival) VALUES('".$train_number."','".$source_id."',NULL,'".$depature_time."',1)";
 if ($conn->query($query1) === TRUE) 
 {
  echo "" ;
@@ -58,7 +58,7 @@ else
 {
  echo "";
 }
-$query2 = "INSERT INTO schedule(train_number, station_id, arrival_time, departure_time) VALUES('".$train_number."','".$destination_id."','".$arrival_time."',NULL)";
+$query2 = "INSERT INTO schedule(train_number, station_id, arrival_time, departure_time,day_of_arrival) VALUES('".$train_number."','".$destination_id."','".$arrival_time."',NULL,2)";
 if ($conn->query($query2) === TRUE) 
 {
  echo "" ;
