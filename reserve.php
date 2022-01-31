@@ -82,7 +82,7 @@ if(isset($_POST["did"])) {
     $result=mysqli_query($conn,$query);
 
     echo "
-    <br><label>Add Train :</label>
+    <br><label>Book Ticket :</label>
     
     <form action=\"reserve.php\" method=\"post\">
     <table>
