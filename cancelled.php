@@ -1,25 +1,29 @@
 <html>
-<body > 
-    <style>
+<body >    
+<style>
         body{
             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
-            height: 100%; 
+            height: 100%; margin-top:100px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;text-align:center;
         }
         table{
-            padding-top:100px;
+            padding-top:300px;
             margin:auto;
+            border-collapse: collapse;
+            width: 80%;
+            color: #00332E;
         }
         td{
             color:green;
             font-size: x-large;
             font-weight: 900;
             text-transform:uppercase;
+            border:2px solid black;
         }
         a{
-            background-color: rgb(99, 99, 245); /* Green */
+            background-color: rgb(99, 99, 245); 
             border: none;
             color: white;
             padding: 15px 32px;
@@ -36,8 +40,14 @@
             margin-bottom:8px;
             color:red;
         }
-    </style>
 
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #f2f2f2}
+    </style>
 <?php
 session_start();
 require "db.php";

@@ -1,27 +1,29 @@
 <html>
-<body>
-    <style>
+<body>   
+<style>
         body{
             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0m5zMFcRknp3gZI-_RM84EPq3Ot0g6pRxg&usqp=CAU');
-            height: 100%; 
+            height: 100%; margin-top:100px;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
-            text-align:center;
-            margin-top:100px;
+            background-size: cover;text-align:center;
         }
         table{
-            padding-top:100px;
+            padding-top:300px;
             margin:auto;
+            border-collapse: collapse;
+            width: 80%;
+            color: #00332E;
         }
         td{
             color:green;
             font-size: x-large;
             font-weight: 900;
             text-transform:uppercase;
+            border:2px solid black;
         }
-        .submit,a{
-            background-color: rgb(99, 99, 245); /* Green */
+        a{
+            background-color: rgb(99, 99, 245); 
             border: none;
             color: white;
             padding: 15px 32px;
@@ -33,6 +35,19 @@
         a:hover{
             background-color: blue;
         }
+        .inputs{
+            padding: 10px 15px;
+            margin-bottom:8px;
+            color:red;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 7px;
+            padding-left:0px;
+        }
+        tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #f2f2f2}
     </style>
 
 
@@ -73,6 +88,7 @@ if(isset($_POST["cname"])){
     echo "
     <table><form action=\"reserve_2.php\" method=\"post\">
     <tr><td>Train Number</td><td>AC1 Seats</td><td>Fare</td><td>AC2 Seats</td><td>Fare</td><td>AC3 Seats</td><td>Fare</td><td>CC Seats</td><td>Fare</td><td>SL Seats</td><td>Fare</td><td>Choose Class</td></tr>
+    
     <tr><td>".$_GET["train_number"]."</td>";
     $_SESSION["train_number"] = $_GET["train_number"];
     $query="SELECT * FROM classes WHERE train_number = '".$_GET["train_number"]."' and doj = '".$doj."'";
