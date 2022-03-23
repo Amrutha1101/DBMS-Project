@@ -50,16 +50,26 @@ $pnr=$_POST["cpnr"];
 
 //echo "$uid";
 
-$sql=" UPDATE ticket SET status ='CANCELLED' WHERE ticket.pnr='".$pnr."' AND ticket.user_email='".$_SESSION["uemailid"]."' ";
-
-if ($conn->query($sql) === TRUE) 
-{
- echo "Cancellation Successful!!!";
-} 
-else 
-{
- echo "<br><br>Error:" . $conn->error;
+$query = "SELECT status FROM ticket WHERE ticket.pnr = '".$pnr."' ";
+$result=mysqli_query($conn,$query);
+$cdrow = mysqli_fetch_array($result);
+if($cdrow["status"] == 'CANCELLED'){
+    echo "The ticket is already cancelled";
+}else{
+    $sql=" UPDATE ticket SET status ='CANCELLED' WHERE ticket.pnr='".$pnr."' AND ticket.user_email='".$_SESSION["uemail"]."' ";
+    if ($conn->query($sql) === TRUE) 
+    {
+        echo "Cancellation Successful!!!";
+    } 
+    else 
+    {
+        echo "<br><br>Error:" . $conn->error;
+    }
 }
+
+
+
+
 
 echo " <br><br><a href=\"http://localhost/railway/user_page.php\">Go Back</a><br>";
 
