@@ -76,7 +76,6 @@ if(isset($_POST["cname"])){
 <<<<<<< HEAD
         $cdquery1="INSERT INTO ticket(train_number, arrival_time, departure_time, date_of_journey, fare, source_station_name, destination_station_name, class_name, status, user_email, num_of_pass) VALUES ('".$_SESSION["train_number"]."','".$cdrow[0]."','".$cdrow[1]."','".$doj."','".$cdrow[2]."','".$cdrow[3]."','".$cdrow[4]."','".$_POST["cname"]."',\"BOOKED\",'".$_SESSION["uemail"]."','".$_SESSION["nop"]."')";
 =======
-        $cdquery1="INSERT INTO ticket(train_number, arrival_time, departure_time, date_of_journey, fare, sorce_station_name, destination_station_name, class_name, status, user_email, num_of_pass) VALUES ('".$_SESSION["train_number"]."','".$cdrow[0]."','".$cdrow[1]."','".$doj."','".$cdrow[2]."','".$cdrow[3]."','".$cdrow[4]."','".$_POST["cname"]."',\"BOOKED\",'".$_SESSION["uemail"]."','".$_SESSION["nop"]."')";
 >>>>>>> 5993e1a821e890443ce19bbb4b76f207b554a643
         $cdresult1 = mysqli_query($conn, $cdquery1);
         if ($conn->query($cdquery1) === TRUE) {
