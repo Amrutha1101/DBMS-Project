@@ -70,10 +70,10 @@ if(isset($_POST["cname"])){
     if($row4["seats_left"] < $_SESSION["nop"]){
         echo "Seats are not available";
     }else{
-        $cdquery = "SELECT arrival_time, depature_time, fare, s.station_name, st.station_name FROM ((train t join classes c on t.train_number = c.train_number) join station s on s.station_id = t.source_id) join station st on st.station_id = t.destination_id WHERE class_name = '".$_POST["cname"]."' and t.train_number = '".$_SESSION["train_number"]."' and doj = '".$_SESSION["doj"]."'";
+        $cdquery = "SELECT arrival_time, departure_time, fare, s.station_name, st.station_name FROM ((train t join classes c on t.train_number = c.train_number) join station s on s.station_id = t.source_id) join station st on st.station_id = t.destination_id WHERE class_name = '".$_POST["cname"]."' and t.train_number = '".$_SESSION["train_number"]."' and doj = '".$_SESSION["doj"]."'";
         $cdresult=mysqli_query($conn,$cdquery);
         $cdrow= mysqli_fetch_array($cdresult);
-        $cdquery1="INSERT INTO ticket(train_number, arrival_time, departure_time, date_of_journey, fare, sorce_station_name, destination_station_name, class_name, status, user_email, num_of_pass) VALUES ('".$_SESSION["train_number"]."','".$cdrow[0]."','".$cdrow[1]."','".$doj."','".$cdrow[2]."','".$cdrow[3]."','".$cdrow[4]."','".$_POST["cname"]."',\"BOOKED\",'".$_SESSION["uemailid"]."','".$_SESSION["nop"]."')";
+        $cdquery1="INSERT INTO ticket(train_number, arrival_time, departure_time, date_of_journey, fare, source_station_name, destination_station_name, class_name, status, user_email, num_of_pass) VALUES ('".$_SESSION["train_number"]."','".$cdrow[0]."','".$cdrow[1]."','".$doj."','".$cdrow[2]."','".$cdrow[3]."','".$cdrow[4]."','".$_POST["cname"]."',\"BOOKED\",'".$_SESSION["uemail"]."','".$_SESSION["nop"]."')";
         $cdresult1 = mysqli_query($conn, $cdquery1);
         if ($conn->query($cdquery1) === TRUE) {
             echo " Ticket is booked successfully";

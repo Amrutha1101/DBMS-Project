@@ -49,7 +49,7 @@
 tr:nth-child(odd){background-color: #f2f2f2}
     </style>
 
-
+      
 <?php
 
 session_start();
@@ -66,7 +66,7 @@ if(isset($_POST["did"])) {
     echo "<table>";
     $cdquery = "SELECT * FROM train WHERE source_id = '".$_SESSION["stid"]."' and destination_id = '".$_SESSION["dtid"]."'";
     $cdresult1=mysqli_query($conn,$cdquery);
-    echo "<tr><td>Train Number</td><td>From Station</td><td>To Station<td></td><td>AC1 Seats</td><td>AC2 Seats</td><td>AC3 Seats</td><td>CC Seats</td><td>SL Seats</td></tr>";
+    echo "<tr><td>Train Number</td><td>From Station</td><td>To Station</td><td>AC1 Seats</td><td>AC2 Seats</td><td>AC3 Seats</td><td>CC Seats</td><td>SL Seats</td></tr>";
     while($cdrow1=mysqli_fetch_array($cdresult1)){
         echo "<tr><td>".$cdrow1["train_number"]."</td><td>".$_SESSION["stid"]."</td><td>".$_SESSION["dtid"]."</td>";
         $cdquery2 = "SELECT * FROM classes WHERE train_number = '".$cdrow1["train_number"]."' and doj = '".$_SESSION["doj"]."'";

@@ -63,7 +63,7 @@ echo "
 while ($cdrow=mysqli_fetch_array($cdresult)) 
 {
 	echo "
-<tr><td>".$cdrow['train_number']."</td><td>".$cdrow['train_name']."</td><td>".$cdrow['source_id']."</td><td>".$cdrow['depature_time']."</td><td>".$cdrow['destination_id']."</td><td>".$cdrow['arrival_time']."</td><td>".$cdrow['Day_of_arrival']."</td><td><a href=\"http://localhost/railway/schedule.php?train_number=".$cdrow['train_number']."\"><button>Schedule</button></a></td>\t\t<td><a href=\"http://localhost/railway/delete_train.php?train_number=".$cdrow['train_number']."\"><button>Delete</button></a></td></tr>
+<tr><td>".$cdrow['train_number']."</td><td>".$cdrow['train_name']."</td><td>".$cdrow['source_id']."</td><td>".$cdrow['departure_time']."</td><td>".$cdrow['destination_id']."</td><td>".$cdrow['arrival_time']."</td><td>".$cdrow['day_of_arrival']."</td><td><a href=\"http://localhost/railway/schedule.php?train_number=".$cdrow['train_number']."\"><button>Schedule</button></a></td>\t\t<td><a href=\"http://localhost/railway/delete_train.php?train_number=".$cdrow['train_number']."\"><button>Delete</button></a></td></tr>
 ";
 }
 echo "</table>";
